@@ -50,11 +50,34 @@
 
 		public function mostrar_usuarios()
 		{
-			$data = array("usuario" => $this->Administrador_model->ver_usuario_cajero());
-			// $this->datos["vista"] = 'administrador_view/usuarios';
+			$this->datos = array('usuario' => $this->Administrador_model->ver_usuario_cajero());
+
+			
 			
 			$this->datos["vista"] = 'administrador_view/usuarios';
-			$this->load->view("principal",$this->datos,$data);
+			$this->load->view("principal",$this->datos);
+		}
+
+		public function grafica_transaccion()
+		{
+				
+			// $data = $this->Administrador_model->ver_grafica();
+			// $djason = json_encode($data);
+					
+			// $this->datos["grafica"] = $djason;
+
+			$this->datos = array("grafica" => $this->Administrador_model->ver_grafica(),"monto_retiro" => $this->Administrador_model->monto_retiro(),"monto_deposito" => $this->Administrador_model->monto_deposito());
+
+			// // $this->datos = array('monto_retiro' => $this->Administrador_model->monto_retiro());
+
+			// echo "<pre>";
+			// print_r ($this->Administrador_model->monto_retiro());
+			// echo "</pre>";
+			// die();
+				
+			$this->datos["vista"] = 'administrador_view/monitor_transferencias';
+			// $this->load->view('administrador_view/monitor_transferencias');
+			$this->load->view("principal", $this->datos);
 		}
 
 

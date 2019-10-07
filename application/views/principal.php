@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Rodas</title>
 	<link rel="stylesheet" href="<?php echo base_url("assets/bootstrap/css/bootstrap.min.css")?>">
+	<link href="https://fonts.googleapis.com/css?family=Baloo|Fascinate+Inline|Lobster|Lobster+Two|Nunito|Poiret+One |Ranga|Titillium+Web" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Ceviche+One|Cookie|Covered+By+Your+Grace|Damion|Great+Vibes|Just+Another+Hand|Leckerli+One|Ruslan+Display|Yellowtail|Yesteryear" rel="stylesheet">
+
 	<style type="text/css">
 		body{
 		   background-color: white;
@@ -15,8 +18,8 @@
 	</style>
 	<script src="<?php echo base_url("assets/bootstrap/js/bootstrap.min.js")?>"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	
 </head>
 <body>
 	<header>
@@ -40,10 +43,3 @@
 </body>
 </html>
 
-<script type="">
-	Morris.Bar({
-		element : 'chart',
-		data : [<?php echo $chart_data; ?>],
-		xkey:
-	})
-</script>
