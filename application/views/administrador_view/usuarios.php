@@ -1,12 +1,9 @@
 
-<?php 
-	echo "<pre>";
-	print_r ($usuario);
-	echo "</pre>";
- ?>
+
 <form method="POST">
 <label>ID de usuario a invalidar</label>
 <input type="number" name="invalidar" required="true">
+<input type="submit" name="Enviar">
 </form>
 
  <table class="table">

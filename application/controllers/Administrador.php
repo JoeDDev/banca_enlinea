@@ -52,7 +52,10 @@
 		{
 			$this->datos = array('usuario' => $this->Administrador_model->ver_usuario_cajero());
 
-			
+			if ($this->input->post('invalidar')) {
+				$update = array('estado' => $this->input->post('invalidar') );				
+				$this->Administrador_model->invalidar_usuario($update["estado"]);			
+			}		
 			
 			$this->datos["vista"] = 'administrador_view/usuarios';
 			$this->load->view("principal",$this->datos);

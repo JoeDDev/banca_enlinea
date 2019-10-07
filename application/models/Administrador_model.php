@@ -23,7 +23,8 @@
 
 		public function invalidar_usuario($valor)
 		{
-			$this->db->set('estado',$valor)
+			$this->db->set('estado',1,false)
+					 ->where('id_usuario',$valor)
 					 ->update('banca.usuario');
 		}
 
